@@ -14,7 +14,13 @@ def create_pelicula(db: Session, pelicula: dtos.PeliculaCreate):
         overview = pelicula.overview,
         year = pelicula.year,
         rating = pelicula.rating,
-        category = pelicula.category
+        category = pelicula.category,
+        
+        director = pelicula.director,
+        duration = pelicula.duration,
+        format = pelicula.format,
+        isPremiere = pelicula.isPremiere,
+        releaseDate = pelicula.releaseDate
     )  
     
     db.add(db_pelicula) 
@@ -31,6 +37,13 @@ def actualizar_pelicula(db: Session, pelicula_id: int, pelicula_update: dtos.Pel
        db_pelicula.year = pelicula_update.year
        db_pelicula.rating = pelicula_update.rating
        db_pelicula.category = pelicula_update.category
+       
+       db_pelicula.director = pelicula_update.director
+       db_pelicula.duration = pelicula_update.duration
+       db_pelicula.format = pelicula_update.format
+       db_pelicula.isPremiere = pelicula_update.isPremiere
+       db_pelicula.releaseDate = pelicula_update.releaseDate
+         
        
        db.commit()
        db.refresh(db_pelicula)

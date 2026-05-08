@@ -7,6 +7,12 @@ class PeliculaBase(BaseModel):
     rating: float
     category: str
     
+    director: str
+    duration: int
+    format: str
+    isPremiere: bool
+    releaseDate: str
+    
 class PeliculaCreate(PeliculaBase):
    pass 
 
