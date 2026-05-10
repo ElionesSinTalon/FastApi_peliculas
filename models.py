@@ -16,3 +16,4 @@ class Pelicula(Base):
     format = Column(String)
     isPremiere = Column(Boolean)
     releaseDate = Column(String)
+    posterUrl = Column(String)

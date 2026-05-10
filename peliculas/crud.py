@@ -20,7 +20,8 @@ def create_pelicula(db: Session, pelicula: dtos.PeliculaCreate):
         duration = pelicula.duration,
         format = pelicula.format,
         isPremiere = pelicula.isPremiere,
-        releaseDate = pelicula.releaseDate
+        releaseDate = pelicula.releaseDate,
+        posterUrl = pelicula.posterUrl
     )  
     
     db.add(db_pelicula) 
@@ -43,7 +44,7 @@ def actualizar_pelicula(db: Session, pelicula_id: int, pelicula_update: dtos.Pel
        db_pelicula.format = pelicula_update.format
        db_pelicula.isPremiere = pelicula_update.isPremiere
        db_pelicula.releaseDate = pelicula_update.releaseDate
-         
+       db_pelicula.posterUrl = pelicula_update.posterUrl
        
        db.commit()
        db.refresh(db_pelicula)

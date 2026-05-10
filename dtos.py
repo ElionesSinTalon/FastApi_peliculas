@@ -12,6 +12,7 @@ class PeliculaBase(BaseModel):
     format: str
     isPremiere: bool
     releaseDate: str
+    posterUrl: str
     
 class PeliculaCreate(PeliculaBase):
    pass 
