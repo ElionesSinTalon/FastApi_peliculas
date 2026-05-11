@@ -1,4 +1,21 @@
+# Entorno virtual
 venv/
+
+# Python cache
 __pycache__/
 *.pyc
-.env 
+
+# Variables de entorno
+.env
+
+# Base de datos local SQLite
+*.db
+
+# VSCode
+.vscode/
+
+# Logs
+*.log
+
+# Archivos del sistema
+.DS_Store
